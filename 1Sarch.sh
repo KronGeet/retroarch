@@ -46,6 +46,7 @@ mkswap  /dev/sda2
 sleep 5
 swapon  /dev/sda2
 sleep 5
+echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel linux linux-firmware nano
 
 genfstab -U /mnt >> /mnt/etc/fstab
